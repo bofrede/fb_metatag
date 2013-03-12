@@ -20,9 +20,9 @@ Run migration
 Create new fb-metatag from fb_metatag menu. provide appropriate model or resource name in right format. e.g : refinery/blog/post 
 Default meta tags for resource can be set here. However, meta tag on provided for individual model will be used if provided
 2. Render form for the page to add og metatag fields. e.g. :
-	<%= render "/shared/fb_metatag" , :f => f  %>	
+	<blockquote>
+	<%= render "/shared/fb_metatag" , :f => f  %>	</blockquote>
 3. Add Meta tags at header of your page. i.e. :
-<blockquote>
   <% array=(params[:controller]).split('/') %>
   <% model_name = (array.last).singularize.downcase %>
   <% @params= instance_variable_get("@#{model_name}") %>
@@ -45,7 +45,6 @@ Default meta tags for resource can be set here. However, meta tag on provided fo
   <meta itemprop="description" content="" />
   <meta itemprop="image" content="http://www.iwa.fi/images/logo.png" />
   <% end %>
-</blockquote>
 4. Restart your application: This gem adds og attributes when you add the model to fb_metatag. So it requires restart of application to take it in to affect.
 
 
