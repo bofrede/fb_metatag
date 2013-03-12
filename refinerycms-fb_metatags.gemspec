@@ -3,6 +3,7 @@
 Gem::Specification.new do |s|
   s.platform          = Gem::Platform::RUBY
   s.name              = 'refinerycms-fb_metatags'
+  s.author              = 'sunil shrestha'
   s.version           = '1.0'
   s.description       = 'Ruby on Rails Fb Metatags extension for Refinery CMS'
   s.date              = '2013-03-04'
