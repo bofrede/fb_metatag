@@ -22,6 +22,7 @@ Default meta tags for resource can be set here. However, meta tag on provided fo
 2. Render form for the page to add og metatag fields. e.g. :
 	<%= render "/shared/fb_metatag" , :f => f  %>	
 3. Add Meta tags at header of your page. i.e. :
+<blockquote>
   	<head>
 	  <% array=(params[:controller]).split('/') %>
 	  <% model_name = (array.last).singularize.downcase %>
@@ -46,6 +47,7 @@ Default meta tags for resource can be set here. However, meta tag on provided fo
 	  <meta itemprop="image" content="http://www.iwa.fi/images/logo.png" />
 	  <% end %>
 	</head>
+</blockquote>
 4. Restart your application: This gem adds og attributes when you add the model to fb_metatag. So it requires restart of application to take it in to affect.
 
 
