@@ -23,29 +23,28 @@ Default meta tags for resource can be set here. However, meta tag on provided fo
 	<%= render "/shared/fb_metatag" , :f => f  %>	
 3. Add Meta tags at header of your page. i.e. :
 <blockquote>
-  	
-	  <% array=(params[:controller]).split('/') %>
-	  <% model_name = (array.last).singularize.downcase %>
-	  <% @params= instance_variable_get("@#{model_name}") %>
-	  <% if (params[:action]=="show") %>
-	  <%= raw "<meta property=\"og:title\" content=\"#{@params.og_title}\"/>" %>
-	  <%= raw "<meta property=\"og:description\" content=\"#{@params.og_description}\"/>" %>
-	  <%= raw "<meta property=\"og:type\" content=\"#{@params.og_type}\"/>" %>
-	  <%= raw "<meta property=\"og:url\" content=\"#{request.url }\"/>" %>
-	  <%= raw "<meta property=\"article:tag\" content=\"#{@params.article_tag}\"/>" %>
-	  <%= raw "<meta property=\"article:author\" content=\"#{@params.article_author}\"/>" %>
-	  <%= raw "<meta property=\"og:image\" content=\"http://www.iwa.fi/images/logo.png\"/>" %>
-	  <% else %>
-	  <meta property="og:title" content="Iwa Labs Oy" />
-	  <meta property="og:type" content="company" />
-	  <meta property="og:url" content="<%= request.url %>" />
-	  <meta property="og:image" content="http://www.iwa.fi/images/logo.png" />
-	  <meta property="og:site_name" content="Iwa Labs" />
-	  <meta property="fb:app_id" content="212311028070" />
-	  <meta itemprop="name" content="Iwa Labs Oy" />
-	  <meta itemprop="description" content="" />
-	  <meta itemprop="image" content="http://www.iwa.fi/images/logo.png" />
-	  <% end %>
+  <% array=(params[:controller]).split('/') %>
+  <% model_name = (array.last).singularize.downcase %>
+  <% @params= instance_variable_get("@#{model_name}") %>
+  <% if (params[:action]=="show") %>
+  <%= raw "<meta property=\"og:title\" content=\"#{@params.og_title}\"/>" %>
+  <%= raw "<meta property=\"og:description\" content=\"#{@params.og_description}\"/>" %>
+  <%= raw "<meta property=\"og:type\" content=\"#{@params.og_type}\"/>" %>
+  <%= raw "<meta property=\"og:url\" content=\"#{request.url }\"/>" %>
+  <%= raw "<meta property=\"article:tag\" content=\"#{@params.article_tag}\"/>" %>
+  <%= raw "<meta property=\"article:author\" content=\"#{@params.article_author}\"/>" %>
+  <%= raw "<meta property=\"og:image\" content=\"http://www.iwa.fi/images/logo.png\"/>" %>
+  <% else %>
+  <meta property="og:title" content="Iwa Labs Oy" />
+  <meta property="og:type" content="company" />
+  <meta property="og:url" content="<%= request.url %>" />
+  <meta property="og:image" content="http://www.iwa.fi/images/logo.png" />
+  <meta property="og:site_name" content="Iwa Labs" />
+  <meta property="fb:app_id" content="212311028070" />
+  <meta itemprop="name" content="Iwa Labs Oy" />
+  <meta itemprop="description" content="" />
+  <meta itemprop="image" content="http://www.iwa.fi/images/logo.png" />
+  <% end %>
 </blockquote>
 4. Restart your application: This gem adds og attributes when you add the model to fb_metatag. So it requires restart of application to take it in to affect.
 
