@@ -23,11 +23,11 @@ Default meta tags for resource can be set here. However, meta tag on provided fo
 	<blockquote>
 	<%= render "/shared/fb_metatag" , :f => f  %>	</blockquote>
 3. Add Meta tags at header of your page. i.e. :
-  `<% array=(params[:controller]).split('/') %>
-  <% model_name = (array.last).singularize.downcase %>
-  <% @params= instance_variable_get("@#{model_name}") %>
-  <% if (params[:action]=="show") %>
-  <%= raw "<meta property=\"og:title\" content=\"#{@params.og_title}\"/>" %>
+`<% array=(params[:controller]).split('/') %>`
+`<% model_name = (array.last).singularize.downcase %>`
+`<% @params= instance_variable_get("@#{model_name}") %>`
+<% if (params[:action]=="show") %>
+<%= raw "<meta property=\"og:title\" content=\"#{@params.og_title}\"/>" %>
   <%= raw "<meta property=\"og:description\" content=\"#{@params.og_description}\"/>" %>
   <%= raw "<meta property=\"og:type\" content=\"#{@params.og_type}\"/>" %>
   <%= raw "<meta property=\"og:url\" content=\"#{request.url }\"/>" %>
