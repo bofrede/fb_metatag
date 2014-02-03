@@ -8,7 +8,7 @@ Add refinerycms-fb_metatag to your Gemfile
 
 Run generator
 
-    rails g refinery:auto_fbposts
+    rails g refinery:fb_metatag
 
 Run migration
 
