@@ -4,7 +4,7 @@
 
 Add refinerycms-fb_metatag to your Gemfile
 
-    gem 'refinerycms-fb_metatags', :git => 'git://github.com/sakomee/refinerycms-fb_metatags.git'
+    gem 'refinerycms-fb_metatags', :git => 'git://github.com/sunil-shrestha/fb_metatag.git'
 
 Run generator
 
