@@ -4,11 +4,11 @@
 
 Add refinerycms-fb_metatag to your Gemfile
 
-    gem 'refinerycms-fb_metatags', :git => 'git://github.com/sakomee/refinerycms-fb_metatags.git'
+    gem 'refinerycms-fb_metatags', :git => 'git://github.com/sunil-shrestha/fb_metatag.git'
 
 Run generator
 
-    rails g refinery:auto_fbposts
+    rails g refinery:fb_metatag
 
 Run migration
 
